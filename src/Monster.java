@@ -1,7 +1,7 @@
 public class Monster {
-    final private String name;
+    public String name;
 
-    final private int damage;
+    public int damage;
 
     public Monster(String name, int damage) {
         this.name = name;
@@ -14,6 +14,6 @@ public class Monster {
     }
 
     public void growl() {
-        System.out.println(name + " growled");
+        System.out.println(Zombie.scream + name + " growled");
     }
 }

@@ -1,10 +1,8 @@
 public class Main {
     public static void main(String[] args) {
-        final Zombie zombie1 = new Zombie("Alice");
-        zombie1.attack();
+        Zombie zombie1 = new Zombie("Alice");
         zombie1.growl();
-        Zombie zombie2 = new Zombie("Bob");
-        zombie2.attack();
-        zombie2.growl();
+        zombie1.growl(true);
+        zombie1.growl(false);
     }
 }
