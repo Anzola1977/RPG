@@ -14,6 +14,6 @@ public class Monster {
     }
 
     public void growl() {
-        System.out.println(Zombie.scream + name + " growled");
+        System.out.println(name + " growled");
     }
 }
