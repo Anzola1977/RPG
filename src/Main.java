@@ -1,19 +1,27 @@
 public class Main {
     public static void main(String[] args) {
-        Zombie zombie1 = new Zombie("Alice");
-        zombie1.growl();
-        zombie1.growl(true);
-        zombie1.growl(false);
+        Monster monster = new Monster();
+        Zombie zombie = new Zombie("Alice");
+        Zombie zombie1 = new Zombie("Bob");
+        Zombie zombie2 = new Zombie("Eve");
+        GiantSnake snake = new GiantSnake("Kaa", 20, 7);
+        GiantSnake snake1 = new GiantSnake("Son of Kaa", 15,5);
+        //zombie1.growl();
+        //zombie1.growl(true);
+        //zombie1.growl(false);
         Battle battle = new Battle();
-        battle.add(new Zombie("Alice"));
-        battle.add(new Zombie("Bob"));
-        battle.add(new Zombie("Eve"));
-        battle.add(new GiantSnake("Kaa"));
-        battle.add(new GiantSnake("Son of Kaa"));
+        battle.add(zombie);
+        battle.add(zombie1);
+        battle.add(zombie2);
+        battle.add(snake);
+        battle.add(snake1);
+        //zombie.attack(zombie);
 
-        battle.add(new Zombie("Noname"));
-        battle.add(new GiantSnake("Noname"));
 
-        battle.start();
+        //battle.add(new Zombie("Noname"));
+        //battle.add(new GiantSnake("Noname"));
+
+
+        battle.run(monster);
     }
 }

@@ -2,16 +2,11 @@ public class GiantSnake extends Monster {
 
     public static String scream = "Ssssssssss ";
 
-    public GiantSnake(String name) {
-        super(name + " the GiantSnake", 7);
+    public GiantSnake(String name, int hp, int force) {
+        super(name, hp);
     }
 
-    @Override
-    public void attack() {
-        growl(true);
-        super.attack();
-        System.out.println("     ...and hid in the grass");
-    }
+/*
 
     @Override
     public void growl() {
@@ -19,11 +14,11 @@ public class GiantSnake extends Monster {
         super.growl();
     }
 
-    public void growl(boolean loud) {
+    /*public void growl(boolean loud) {
         if (!loud) {
             super.growl();
         } else {
-            System.out.println(scream.toUpperCase() + super.name + " growled");
+            System.out.println(scream.toUpperCase() + getName() + " growled");
         }
-    }
+    }*/
 }

@@ -5,28 +5,27 @@ public class Battle {
     private Monster[] monsters;
     private int n = 0;
 
-    Battle(){
+    Battle() {
         monsters = new Monster[MAX];
     }
 
-    public void add(Monster monster){
+    public void add(Monster monster) {
         if (n < MAX) {
             monsters[n++] = monster;
-        }
-        else{
+        } else {
             System.out.println("No more monsters!");
         }
     }
 
-    public void run(){
+    public void run(Monster monster) {
         for (int i = 0; i < n; i++) {
-            if (monsters[i] != null){
-                monsters[i].attack();
+            if (monsters[i] != null) {
+                monsters[i].attack(monster);
             }
         }
     }
-
-    public void start(){
-        run();
-    }
 }
+
+   /* public void start(){
+        run();
+    }*/
