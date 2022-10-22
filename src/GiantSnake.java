@@ -1,24 +1,20 @@
-public class GiantSnake extends Monster {
+public class GiantSnake extends Monster implements Fighter{
 
     public static String scream = "Ssssssssss ";
 
-    public GiantSnake(String name, int hp, int force) {
-        super(name, hp);
+    boolean isPoisonous;
+
+    public GiantSnake(String name, boolean isPoisonous) {
+        super(name + " the GiantSnake", 7);
+        this.isPoisonous = isPoisonous;
     }
-
-/*
-
-    @Override
     public void growl() {
         System.out.println(scream);
-        super.growl();
     }
 
-    /*public void growl(boolean loud) {
-        if (!loud) {
-            super.growl();
-        } else {
-            System.out.println(scream.toUpperCase() + getName() + " growled");
-        }
-    }*/
+    @Override
+    public void attack(Entity entity) {
+        entity.damage(getForce());
+        growl();
+    }
 }
